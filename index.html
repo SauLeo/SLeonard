@@ -35,7 +35,55 @@
 
         <input type="submit" name="submit" value="Submit"><br>
     </form>
+    
+    <!--End of Bio-->
 
+    <script>
+    function add(name1, name2) {
+        return name1 + name2;
+    }
+    
+    function subtract(name1, name2) {
+        return name1 - name2;
+    }
+
+    function multiply(name1, name2) {
+        return name1 * name2;
+    }
+    
+    function divide(name1, name2){
+        return name1 / name2;
+    }
+
+    function calculator(name1, name2, operator) {
+        return operator(name1, name2);
+    }
+
+    var name1 = parseFloat(prompt("please enter the first number:"));
+    var name2 = parseFloat(prompt("please enter the second number:"));
+    var operator = prompt("please enter the operator(+, -, *, /):");
+
+    var result;
+
+    switch (operator){
+      case "+":
+        result = calculator(name1, name2, add);
+        break;
+      case"-":
+        result = calculator(name1, name2, subtract);
+        break;
+      case"*":
+        result = calculator(name, name2, multiply);
+        break;
+      case"/":
+        result = calculator(name1, name2, divide);
+        break;
+      default:
+        result = "Invalid operator";
+    }
+
+   console.log("Result:", result);
+ </script>
 </body>
 
 </html>
